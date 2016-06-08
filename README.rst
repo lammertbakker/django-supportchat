@@ -2,7 +2,7 @@
 SupportChat
 ===========
 
-SupportChat is a Django app which adds live chat functionality to your website. Chat sessions can be assigned to specific Django users, which can manage multiple sessions at the same time.
+SupportChat is a Django app that adds live chat functionality to your website. Chat sessions can be assigned to specific Django users, who can manage multiple sessions at the same time.
 
 Quick start
 -----------
