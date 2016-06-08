@@ -1,0 +1,15 @@
+<div id="liveChatBox" class="livechat-modal">
+
+  <!-- Chat window -->
+  <div class="livechat-modal-content">
+    <span class="livechat-close"></span>
+    <div id="chatBox" class="livechat-window" style="overflow:scroll; white-space: pre-line; padding:5px;"></div>
+    <form id="chatForm" name="livechat-message">{% csrf_token %}
+    	<input type="text" id="chatMessage" name="livechat_message" class="livechat-input">
+    	<input type="hidden" id="chatURL" name="livechat_url" class="livechat-input" value="{% url 'livechat_post' %}">
+    	<input type="hidden" id="chatLogURL" name="livechat_get" class="livechat-input" value="{% url 'livechat_get' %}">
+    	<input type="submit" style="display: none;" />
+    </form>
+  </div>
+
+</div>

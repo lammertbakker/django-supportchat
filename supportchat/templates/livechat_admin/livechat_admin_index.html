@@ -1,0 +1,33 @@
+{% extends 'livechat_admin/livechat_admin_base.html' %}
+{% block content %}
+
+<div id="unassignedURL" style="display:none">{% url 'livechat_admin_unassigned' %}</div>
+<div id="userURL" style="display:none">{% url 'livechat_admin_user' %}</div>
+<div id="closedURL" style="display:none">{% url 'livechat_admin_closed' %}</div>
+<div id="closeSessionURL" style="display:none">{% url 'livechat_admin_close_session' %}</div>
+<div id="assignSessionURL" style="display:none">{% url 'livechat_admin_assign_session' %}</div>
+
+<div id="unassigned_chats" class="panel panel-default">
+	<div class="panel-heading">Unassigned</div>
+  	<div class="panel-body">
+		<table class="table" id="unassignedList"></table>
+  	</div>
+</div>
+
+<div id="user_chats" class="panel panel-default">
+	<div class="panel-heading">My chats</div>
+  	<div class="panel-body">
+		<table class="table" id="userList"></table>
+  	</div>
+</div>
+
+<div id="closed_chats" class="panel panel-default">
+	<div class="panel-heading">Recently closed</div>
+  	<div class="panel-body">
+		<table class="table" id="closedList"></table>
+  	</div>
+</div>
+
+{% include 'livechat_admin/livechat_admin_box.html' %}
+
+{% endblock %}

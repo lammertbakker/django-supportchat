@@ -1,0 +1,4 @@
+include LICENSE
+include README.rst
+recursive-include supportchat/static *
+recursive-include supportchat/templates *
