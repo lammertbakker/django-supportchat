@@ -11,6 +11,9 @@ class ChatSession(models.Model):
     
     class Meta:
         db_table = 'supportchat_session'
+        permissions = (
+            ("can_chat", "Can access and manage support chats"),
+        )
            
     def as_dict(self):
         return {

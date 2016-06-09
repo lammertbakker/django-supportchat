@@ -6,7 +6,6 @@ from django.utils.decorators import method_decorator
 from django.views.generic import TemplateView, View
 
 from .models import ChatSession, ChatMessage
-from .settings import LOG_FOLDER
 
 
 class StartChatSession(View):
@@ -73,7 +72,8 @@ class GetChatLog(View):
             return None
     
 
-@method_decorator(login_required, name='dispatch')    
+@method_decorator(login_required, name='dispatch')
+@method_decorator(permission_required('supportchat.can_chat'), name='dispatch') 
 class LiveChatAdmin(TemplateView):
     template_name = 'livechat_admin/livechat_admin_index.html'
         
